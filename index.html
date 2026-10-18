@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hayan Agency - Travel assistance, visa guidance and document services.">
+<title>Hayan Agency | Travel & Documents</title>
+
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;color:#172033;background:#f4f7fb;line-height:1.6}
+header{background:#071d3a;color:white;padding:18px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header h2{color:#f5c451;margin:0}
+nav a{color:white;text-decoration:none;margin:0 8px}
+.hero{background:linear-gradient(90deg,#071d3aeb,#071d3a66),url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1600&q=80') center/cover;color:white;padding:85px 7%}
+.hero h1{font-size:clamp(32px,6vw,52px);max-width:700px;line-height:1.2}
+.hero p{font-size:18px;max-width:600px}
+.btn{display:inline-block;padding:13px 20px;background:#f5c451;color:#071d3a;text-decoration:none;font-weight:bold;border:0;border-radius:7px;cursor:pointer;margin:5px}
+section{padding:45px 6%}
+.title{text-align:center;color:#071d3a;font-size:30px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:white;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px #0001;padding-bottom:15px}
+.card img{width:100%;height:175px;object-fit:cover}
+.card h3,.card p{margin:14px}
+.formbox{max-width:700px;margin:auto;background:white;padding:24px;border-radius:12px;box-shadow:0 4px 15px #0001}
+label{display:block;font-weight:bold;margin-top:13px}
+input,select,textarea{width:100%;padding:12px;margin-top:5px;border:1px solid #ccd3df;border-radius:6px;font:inherit}
+.payment{max-width:700px;margin:25px auto;background:#fff8e5;padding:22px;border-left:5px solid #f5c451;border-radius:8px}
+footer{background:#071d3a;color:white;text-align:center;padding:25px}
+.small{font-size:14px;color:#586579}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>HAYAN AGENCY</h2>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#apply">Apply</a>
+    <a href="#payment">Payment</a>
+  </nav>
+</header>
+
+<div class="hero" id="home">
+  <h1>Your Journey Starts Here</h1>
+  <p>Travel assistance, visa application guidance and document services in one place.</p>
+  <a class="btn" href="#apply">Apply Now</a>
+  <a class="btn" href="#services">Our Services</a>
+</div>
+
+<section id="services">
+  <h2 class="title">Our Services</h2>
+  <div class="cards">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80" alt="Travel">
+      <h3>Travel Assistance</h3>
+      <p>Guidance with travel planning and required documents.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80" alt="Air travel">
+      <h3>Visa Guidance</h3>
+      <p>Help understanding visa application processes and requirements. Visa approval is decided by the relevant authorities.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80" alt="Documents">
+      <h3>Document Services</h3>
+      <p>Assistance organizing documents for customer applications.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="apply">
+  <h2 class="title">Customer Application</h2>
+
+  <div class="formbox">
+    <p>Fill in your details below. Your application will open in WhatsApp for you to review and send.</p>
+
+    <form id="applicationForm">
+      <label for="name">Full Name *</label>
+      <input id="name" required>
+
+      <label for="email">Email Address *</label>
+      <input id="email" type="email" required>
+
+      <label for="phone">Phone Number *</label>
+      <input id="phone" type="tel" required>
+
+      <label for="service">Service Required *</label>
+      <select id="service" required>
+        <option value="">Select a service</option>
+        <option>Visa Guidance</option>
+        <option>Travel Assistance</option>
+        <option>Document Services</option>
+        <option>Other</option>
+      </select>
+
+      <label for="country">Destination Country</label>
+      <input id="country" placeholder="Enter country">
+
+      <label for="details">Additional Information</label>
+      <textarea id="details" rows="3" placeholder="How can we help you?"></textarea>
+
+      <p class="small">Do not enter your passport number, M-Pesa PIN or other sensitive information in this form.</p>
+
+      <label>
+        <input type="checkbox" id="consent" required style="width:auto">
+        I agree to send these application details to Hayan Agency through WhatsApp.
+      </label>
+
+      <button class="btn" type="submit">Submit Application via WhatsApp</button>
+    </form>
+
+    <p id="message" role="status"></p>
+  </div>
+</section>
+
+<section id="payment">
+  <h2 class="title">Manual M-Pesa Payment</h2>
+
+  <div class="payment">
+    <h3>Pay Hayan Agency</h3>
+    <p><strong>M-Pesa Number:</strong> 0798467186</p>
+    <p>1. Confirm the service and amount with our agency.</p>
+    <p>2. Send your payment to the M-Pesa number above.</p>
+    <p>3. Keep your M-Pesa confirmation message.</p>
+    <p>4. Send your transaction code to us through WhatsApp for manual verification.</p>
+    <a class="btn" href="https://wa.me/254729298682?text=Hello%20Hayan%20Agency%2C%20I%20have%20made%20an%20M-Pesa%20payment.%20I%20would%20like%20to%20submit%20my%20transaction%20code.">Submit Payment Confirmation</a>
+    <p class="small">Payments are checked manually. This website does not automatically verify payments.</p>
+    <p class="small">Never share your M-Pesa PIN or password.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="title">Contact Hayan Agency</h2>
+  <p style="text-align:center">Have a question? Chat with us directly on WhatsApp.</p>
+  <p style="text-align:center">
+    <a class="btn" href="https://wa.me/254729298682?text=Hello%20Hayan%20Agency%2C%20I%20would%20like%20more%20information.">Chat on WhatsApp</a>
+  </p>
+  <p style="text-align:center"><strong>WhatsApp: 0729298682</strong></p>
+</section>
+
+<footer>
+  <p>&copy; <span id="year"></span> Hayan Agency. All rights reserved.</p>
+  <p>Travel Assistance | Visa Guidance | Document Services</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("applicationForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const service = document.getElementById("service").value;
+  const country = document.getElementById("country").value.trim();
+  const details = document.getElementById("details").value.trim();
+
+  const text =
+    "NEW CUSTOMER APPLICATION - HAYAN AGENCY\n\n" +
+    "Name: " + name + "\n" +
+    "Email: " + email + "\n" +
+    "Phone: " + phone + "\n" +
+    "Service: " + service + "\n" +
+    "Destination: " + (country || "Not provided") + "\n" +
+    "Details: " + (details || "None");
+
+  document.getElementById("message").textContent =
+    "Congratulations! Your application message is ready. Review it and press Send in WhatsApp.";
+
+  window.location.href =
+    "https://wa.me/254729298682?text=" + encodeURIComponent(text);
+});
+</script>
+
+</body>
+</html>
