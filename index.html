@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Document application assistance and customer support services.">
+<title>Global Document Services Agency</title>
+<style>
+:root{--navy:#102b46;--blue:#1769aa;--gold:#eab84b;--light:#f3f6fa;--ink:#172638}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;color:var(--ink);background:var(--light);line-height:1.6}
+header{background:var(--navy);color:white;padding:17px 5%;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{font-size:20px;font-weight:800}
+.brand span{color:var(--gold)}
+nav a{color:white;text-decoration:none;margin-left:15px;font-size:14px}
+.hero{padding:65px 6%;background:linear-gradient(120deg,#102b46,#1769aa);color:white}
+.hero h1{font-size:clamp(30px,6vw,48px);line-height:1.15;max-width:650px;margin:0 0 16px}
+.hero p{max-width:580px;color:#e3edf7}
+.btn{display:inline-block;background:var(--gold);color:#14283b;padding:12px 20px;border:0;border-radius:7px;font-weight:bold;text-decoration:none;cursor:pointer}
+section{padding:40px 5%;scroll-margin-top:15px}
+.section-title{text-align:center;margin-bottom:25px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.card{background:white;padding:23px;border-radius:12px;box-shadow:0 4px 16px #102b4610}
+.card h3{margin-top:5px}
+.icon{font-size:28px}
+.small{font-size:13px;color:#64748b}
+.application{max-width:720px;margin:auto;background:white;padding:25px;border-radius:12px;box-shadow:0 4px 18px #102b4612}
+label{display:block;font-weight:600;margin:14px 0 5px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:7px;font:inherit;background:white}
+input[type=file]{padding:9px}
+.check{display:flex;gap:10px;align-items:flex-start;font-weight:normal}
+.check input{width:auto;margin-top:7px}
+.payment{background:#fff8e6;border:1px solid #f0d58c;padding:16px;border-radius:9px;margin:18px 0}
+.notice{background:#eef5ff;padding:12px;border-radius:8px;font-size:13px}
+footer{background:var(--navy);color:white;text-align:center;padding:25px}
+footer a{color:#ffda82}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">GLOBAL <span>DOCUMENTS</span></div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#apply">Apply</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <p>YOUR DOCUMENT SUPPORT PARTNER</p>
+  <h1>Document Services Made Simple</h1>
+  <p>Get assistance with document applications, application preparation and customer support. Submit your request online to get started.</p>
+  <a class="btn" href="#apply">Start Your Application →</a>
+</section>
+
+<section id="services">
+  <div class="section-title">
+    <h2>Our Services</h2>
+    <p>Choose the service you need assistance with.</p>
+  </div>
+  <div class="cards">
+    <article class="card"><div class="icon">📄</div><h3>Document Assistance</h3><p>Guidance with preparing and organizing application documents.</p></article>
+    <article class="card"><div class="icon">🌍</div><h3>Visa Application Support</h3><p>Assistance with application forms and document checklists.</p></article>
+    <article class="card"><div class="icon">🗂️</div><h3>Application Review</h3><p>Help checking that application information is complete.</p></article>
+  </div>
+</section>
+
+<section id="apply">
+  <div class="section-title">
+    <h2>Customer Application</h2>
+    <p>Enter your details to begin your service request.</p>
+  </div>
+  <form class="application" id="applicationForm">
+    <label for="fullname">Full name</label>
+    <input id="fullname" name="fullname" autocomplete="name" required maxlength="100" placeholder="Enter your full name">
+
+    <label for="email">Email address</label>
+    <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+
+    <label for="phone">Phone / WhatsApp number</label>
+    <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="+254...">
+
+    <label for="service">Service required</label>
+    <select id="service" name="service" required>
+      <option value="">Select a service</option>
+      <option>Document Assistance</option>
+      <option>Visa Application Support</option>
+      <option>Application Review</option>
+      <option>Other Document Service</option>
+    </select>
+
+    <label for="passport">Passport document (PDF or image)</label>
+    <input id="passport" name="passport" type="file" accept=".pdf,.jpg,.jpeg,.png" required>
+
+    <label for="photo">Face / passport-size photo</label>
+    <input id="photo" name="photo" type="file" accept=".jpg,.jpeg,.png" required>
+
+    <div class="payment">
+      <strong>Payment Information</strong>
+      <p>Payment number: <strong id="paymentNumber">ADD YOUR PAYMENT NUMBER</strong></p>
+      <p class="small">Confirm the service fee and payment instructions with the agency before paying. Submitting this form does not confirm payment.</p>
+    </div>
+
+    <label for="reference">Payment reference (if already paid)</label>
+    <input id="reference" name="reference" maxlength="100" placeholder="Optional transaction reference">
+
+    <label class="check">
+      <input type="checkbox" id="consent" required>
+      <span>I confirm that these are my details and consent to contacting the agency about this request.</span>
+    </label>
+
+    <p class="notice">Privacy: This demo form does not upload files or store applications on a server. Do not upload real passports until a secure submission method has been configured.</p>
+
+    <button class="btn" type="submit" style="width:100%;margin-top:14px">Submit Application</button>
+    <div id="result" role="status" aria-live="polite"></div>
+  </form>
+</section>
+</main>
+
+<footer>
+  <p><strong>Global Document Services Agency</strong></p>
+  <p>Document support and customer application assistance.</p>
+  <p class="small">Independent service provider. Not a government agency. Applications and visas are subject to the relevant authorities' decisions.</p>
+</footer>
+
+<script>
+const WHATSAPP_NUMBER = "254700000000";
+const PAYMENT_NUMBER = "ADD YOUR PAYMENT NUMBER";
+
+document.getElementById("paymentNumber").textContent = PAYMENT_NUMBER;
+
+document.getElementById("applicationForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const result = document.getElementById("result");
+  const whatsapp = WHATSAPP_NUMBER.replace(/\D/g, "");
+
+  if (whatsapp === "254700000000" || whatsapp.length < 10) {
+    result.textContent = "The demo form is ready, but the agency must configure its real WhatsApp number and secure document submission before accepting applications.";
+    result.style.cssText = "margin-top:16px;padding:12px;background:#fff3cd;border-radius:8px";
+    return;
+  }
+
+  result.textContent = "Opening WhatsApp. Your files will NOT be attached automatically. Do not send sensitive documents until you have confirmed the recipient and a secure process.";
+  result.style.cssText = "margin-top:16px;padding:12px;background:#e7f7ed;border-radius:8px";
+
+  const message = [
+    "NEW SERVICE APPLICATION",
+    "Name: " + document.getElementById("fullname").value,
+    "Email: " + document.getElementById("email").value,
+    "Phone: " + document.getElementById("phone").value,
+    "Service: " + document.getElementById("service").value,
+    "Payment reference: " + (document.getElementById("reference").value || "Not provided"),
+    "Please advise on the secure document submission process."
+  ].join("\n");
+
+  window.open("https://wa.me/" + whatsapp + "?text=" + encodeURIComponent(message), "_blank", "noopener,noreferrer");
+});
+</script>
+</body>
+</html>
